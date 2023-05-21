@@ -5,7 +5,7 @@
             "name": "Launch App",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopOnEntry": false,
             "mainClass": "com.mycompany.app.App",
             "args": "",
