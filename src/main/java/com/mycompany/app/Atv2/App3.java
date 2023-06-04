@@ -25,7 +25,8 @@ public class App3 {
       // o programa solicita dados até que o ID digitado seja zero
       // ele deve devolver uma lista de entradas
       List<Entrada> entradas = InputProducts.getEntradas();
-//
+      System.out.println("Teste" + entradas.size());
+//10
       //ProductsInfo info = new ProductsInfo(entradas);
 //
       ////O novo valor de cada um dos produtos. 

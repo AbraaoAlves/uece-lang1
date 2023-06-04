@@ -1,5 +1,6 @@
 package com.mycompany.app.Atv2;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,14 +14,25 @@ public class InputProducts {
 
   public static List<Entrada> getEntradas() {
     
-    int ID = (int)leia("Digite o ID do produto: ");
-    double value = leia("Digite o Valor do produto: ");
-    double percent = leia("Digite o Percentual de aumento do produto: ");
+    List<Entrada> result = new ArrayList<Entrada>();
 
-    Entrada entrada = new Entrada(ID, value, percent);
-
-
-    return null;
+    while(true) {
+      int ID = (int)leia("Digite o ID do produto: ");
+      
+      if (ID == 0) {
+        break; //saiu do loop
+      }
+  
+      double value = leia("Digite o Valor do produto: ");
+      double percent = leia("Digite o Percentual de aumento do produto: ");
+  
+      Entrada entrada = new Entrada(ID, value, percent);
+      
+      result.add(entrada);
+      System.out.println("Você pode finalizar a entrada de dados digitando 0(zero), ou: ");
+    }
+    
+    return result;
   }
 
 }
