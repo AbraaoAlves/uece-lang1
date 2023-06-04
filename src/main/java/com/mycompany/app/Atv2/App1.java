@@ -25,11 +25,37 @@ public class App1 {
     System.out.println(message);
     return scan.nextDouble();
   } 
-
+  public static double porcentagem(int percent, double total) {
+    // valor = (percent * total) / 100
+    return (percent * total) / 100;
+  } 
+  
   public static void main(String[] args) {
     
     double valor = leia("Digite o saldo medio: ");
+    double valorCredito = 0;
 
-    System.out.println("Valor digitado: " + valor);
+    if (valor < 200) {
+      // calcular 0 % do valor
+      valorCredito = porcentagem(0, valor);
+    } 
+
+    if (valor> 200 && valor<400) {
+      // calcular 20 % do valor
+      valorCredito = porcentagem(20, valor);
+    }
+
+    if (valor> 400 && valor<600) {
+      // calcular 30 % do valor
+      valorCredito = porcentagem(30, valor);
+    }
+
+    if (valor> 600 ) {
+      // calcular 40 % do valor
+      valorCredito = porcentagem(40, valor);
+    }
+
+    System.out.println("Saldo médio: " + valor);
+    System.out.println("Valor do credito: " + valorCredito);
   }
 }
