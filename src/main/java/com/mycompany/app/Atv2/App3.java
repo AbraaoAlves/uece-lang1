@@ -38,12 +38,12 @@ public class App3 {
        System.out.printf("| %s | R$ %s |", id, value);
       }
       System.out.println("\n|    |       |");
-//
-      //// A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%.
-      //int quantidade = info.expensiveProducts().size();
-      //System.out.println("A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%, foi: ");
-      //System.out.printf("%s", quantidade);
-//
+
+      // A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%.
+      int quantidade = info.expensiveProducts().size();
+      System.out.println("A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%, foi: ");
+      System.out.printf("%s\n", quantidade);
+
       //// A média de valor dos produtos que não sofreram aumento.
       //double media = info.averageProductsWithoutRise();
       //System.out.println("A média de valor dos produtos que não sofreram aumento, foi: ");

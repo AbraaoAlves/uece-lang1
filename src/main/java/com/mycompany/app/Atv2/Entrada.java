@@ -19,6 +19,13 @@ public class Entrada {
     return risePercent;
   }
 
+  public double newValue(){
+    double value = this.getValue();
+    double percent = this.getRisePercent();
+    double aumento = value * (percent / 100);
+    return value + aumento;
+  }
+
   public Entrada(int id, double value, double percent){
     this.ID = id;
     this.value = value;
