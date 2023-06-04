@@ -15,13 +15,14 @@ public class App2 {
   public static void main(String[] args) {
     List<String> calc = new ArrayList<String>();
     int prev = -1;
-
-    for (int i = 1; i <= 50; i++) {
+    double resultS = 0; 
+    for (int i = 1; i <= 4; i++) {
       prev += 2;
+      resultS += prev/i;
       calc.add(String.format("%s/%s", prev, i));
     }   
 
-
-    System.out.println("Calculo: " + String.join(" + ", calc));
+    System.out.println("Calculo: S=" + String.join(" + ", calc));
+    System.out.println("Resultado: S=" + resultS);
   }
 }
