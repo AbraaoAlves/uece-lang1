@@ -14,12 +14,13 @@ import java.util.ArrayList;
 public class App2 {
   public static void main(String[] args) {
     List<String> calc = new ArrayList<String>();
-    int prev = -1;
+    double prev = -1.0;
     double resultS = 0; 
-    for (int i = 1; i <= 4; i++) {
+
+    for (double i = 1; i <= 50; i++) {
       prev += 2;
       resultS += prev/i;
-      calc.add(String.format("%s/%s", prev, i));
+      calc.add(String.format("%s/%s", (int)prev, (int)i));
     }   
 
     System.out.println("Calculo: S=" + String.join(" + ", calc));
