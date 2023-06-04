@@ -1,8 +1,11 @@
 package com.mycompany.app.Atv2;
 
+import java.util.Scanner;
+
 /**
  * 
- * 1. Um Banco concederá um crédito especial aos seus clientes, variável com o saldo médio no último ano. Faça um algoritmo que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela abaixo.
+ * 1. Um Banco concederá um crédito especial aos seus clientes, variável com o saldo médio no último ano. 
+ * Faça um algoritmo que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela abaixo.
  * 
  *  Mostre uma mensagem informando o saldo médio e o valor do crédito.
  * 
@@ -16,7 +19,17 @@ package com.mycompany.app.Atv2;
  */
 
 public class App1 {
+  static Scanner scan  = new Scanner(System.in);
+  
+  public static  double leia(String message) {
+    System.out.println(message);
+    return scan.nextDouble();
+  } 
+
   public static void main(String[] args) {
-    System.out.println("Ola mundo 2");
+    
+    double valor = leia("Digite o saldo medio: ");
+
+    System.out.println("Valor digitado: " + valor);
   }
 }
