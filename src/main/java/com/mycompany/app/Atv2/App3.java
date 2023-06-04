@@ -50,8 +50,8 @@ public class App3 {
       System.out.printf("%s\n", media);
 
       ////O valor do produto mais caro (após aumento)
-      //Produto produto = info.expensiveProduct();
-      //System.out.println("O valor do produto mais caro (após aumento), foi: ");
-      //System.out.printf("%s - R$ %s", produto.id, produto.value);
+      Produto produto = info.expensiveProduct();
+      System.out.println("O valor do produto mais caro (após aumento), foi: ");
+      System.out.printf("%s - R$ %s", produto.getID(), produto.getValue());
   }
 }

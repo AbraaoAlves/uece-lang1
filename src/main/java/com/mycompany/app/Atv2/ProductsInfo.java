@@ -67,4 +67,17 @@ public class ProductsInfo {
 
     return media;
   }
+
+  public Produto expensiveProduct() {
+    List<Produto> produtos = this.getProdutos();
+    Produto resultado = produtos.get(0);
+
+    for (Produto produto : produtos) {
+      if(produto.getValue() > resultado.getValue()) {
+        resultado = produto;
+      }
+    }
+
+    return resultado;
+  }
 }
