@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App2",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Atv2.App2",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "App1",
             "request": "launch",
             "mainClass": "com.mycompany.app.Atv2.App1",
