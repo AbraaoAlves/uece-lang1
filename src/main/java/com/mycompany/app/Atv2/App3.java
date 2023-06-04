@@ -44,11 +44,11 @@ public class App3 {
       System.out.println("A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%, foi: ");
       System.out.printf("%s\n", quantidade);
 
-      //// A média de valor dos produtos que não sofreram aumento.
-      //double media = info.averageProductsWithoutRise();
-      //System.out.println("A média de valor dos produtos que não sofreram aumento, foi: ");
-      //System.out.printf("%s", media);
-//
+      // A média de valor dos produtos que não sofreram aumento.
+      double media = info.averageProductsWithoutRise();
+      System.out.println("A média de valor dos produtos que não sofreram aumento, foi: ");
+      System.out.printf("%s\n", media);
+
       ////O valor do produto mais caro (após aumento)
       //Produto produto = info.expensiveProduct();
       //System.out.println("O valor do produto mais caro (após aumento), foi: ");

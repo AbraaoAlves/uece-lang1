@@ -47,4 +47,24 @@ public class ProductsInfo {
 
     return resultado;
   }
+
+  /**
+   * A média de valor dos produtos que não sofreram aumento.
+   */
+  public double averageProductsWithoutRise() {
+    double somatorio = 0;
+    int qtd = 0;
+    
+    for (Entrada entrada : this.entradas) {
+      // apenas as entradas com percent 0
+      if (entrada.getRisePercent() == 0) {
+        qtd++;
+        somatorio += entrada.getValue();
+      }
+    }
+    
+    double media = somatorio / qtd;
+
+    return media;
+  }
 }
