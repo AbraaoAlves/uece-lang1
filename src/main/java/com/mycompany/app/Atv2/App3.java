@@ -25,17 +25,19 @@ public class App3 {
       // o programa solicita dados até que o ID digitado seja zero
       // ele deve devolver uma lista de entradas
       List<Entrada> entradas = InputProducts.getEntradas();
-      System.out.println("Teste" + entradas.size());
-//10
-      //ProductsInfo info = new ProductsInfo(entradas);
-//
-      ////O novo valor de cada um dos produtos. 
-      //List<Produto> produtos = info.getProdutos();
-      //
-      //System.out.println("| ID | Value |");
-      //for (Produto produto : produtos) {
-      //  System.out.printf("| %s | R$ %s |", produto.id, produto.value);
-      //}
+
+      ProductsInfo info = new ProductsInfo(entradas);
+
+      // O 'novo valor' de cada um dos produtos. 
+      List<Produto> produtos = info.getProdutos();
+      
+      System.out.println("| ID | Value |");
+      for (Produto produto : produtos) {
+       int id = produto.getID();
+       double value = produto.getValue();
+       System.out.printf("| %s | R$ %s |", id, value);
+      }
+      System.out.println("\n|    |       |");
 //
       //// A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%.
       //int quantidade = info.expensiveProducts().size();
