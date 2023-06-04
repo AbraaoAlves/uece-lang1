@@ -1,0 +1,23 @@
+package com.mycompany.app.Atv2;
+
+/**
+ * 
+ * Uma empresa realizou uma pesquisa com os seus fornecedores, na qual foram coletados os seguintes dados referentes aos produtos fornecidos:
+ * ID, Valor e Percentual de aumento 
+ *
+ * Obs. Se o produto não tiver sofrido alteração de preço, o percentual de aumento será igual a 0.
+ *
+ *  Faça um programa que determine e escreva: 
+ * 
+ *  1. O novo valor de cada um dos produtos. 
+ *  2. A quantidade de produtos mais caros que R$ 100,00 (após aumento) e que tiveram aumento superior a 5%. 
+ *  3. A média de valor dos produtos que não sofreram aumento. 
+ *  4. O valor do produto mais caro (após aumento).
+ *
+ *  Obs.: o programa solicita dados até que o ID digitado seja zero
+ */
+public class App3 {
+  public static void main(String[] args){
+      System.out.println("Ola qualquer coisa");
+  }
+}
