@@ -20,11 +20,11 @@ import java.util.List;
  */
 public class App3 {
   public static void main(String[] args){
-      
-      System.out.println("Ola qualquer coisa");
+
+      System.out.println("Programa de produtos! \n\n");
       // o programa solicita dados até que o ID digitado seja zero
       // ele deve devolver uma lista de entradas
-      //List<Entradas> entradas = InputProducts.getProdutcs();
+      List<Entrada> entradas = InputProducts.getEntradas();
 //
       //ProductsInfo info = new ProductsInfo(entradas);
 //
