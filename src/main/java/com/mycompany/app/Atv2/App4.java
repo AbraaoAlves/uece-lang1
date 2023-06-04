@@ -29,7 +29,7 @@ public class App4 {
     int qtdHighHate = 0;
     double sumAge = 0;
     double sumDislike = 0;
-    Answer oldAnwer = answers.get(0);
+    Answer oldAnswer = answers.get(0);
 
     for (Answer answer : answers) {
       if (answer.getHate() == 10) {
@@ -51,7 +51,7 @@ public class App4 {
     System.out.println("A quantidade de respostas 10. R = " + qtdHighHate);
     System.out.println("A média de idade das pessoas que responderam o questionário. R = " + averageAge);
     System.out.println("A percentagem de pessoas que responderam 5 ou menos para a opinião da peça. R = " + percentDislike);
-    System.out.println("O identificador da pessoa mais velha. R = " + oldAnwer.getID()); 
+    System.out.println("O identificador da pessoa mais velha. R = " + oldAnswer.getID()); 
 
   }  
 }
