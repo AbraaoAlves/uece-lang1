@@ -2,6 +2,45 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Atv3Qt6",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Atv3.Atv3Qt6",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Atv3Qt4",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Atv3.Atv3Qt4",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Atv3Qt3",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Atv3.Atv3Qt3",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Atv3Qt2",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Atv3.Atv3Qt2",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "App1",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false,
+            "args": "",
+            "console": "integratedTerminal",
+            "mainClass": "com.mycompany.app.Atv3.App1",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "App4",
             "request": "launch",
             "mainClass": "com.mycompany.app.Atv2.App4",
