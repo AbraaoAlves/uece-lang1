@@ -7,12 +7,44 @@ public class Quest1 {
     int[][] numeros = new int[8][4];
 
     fillMatrix(numeros);
-    printMatrix(numeros);
+  
     printSumMatrix(numeros);
+    printLowerNumberMatrix(numeros);
     printDiagonalSumMatrix(numeros);
-
+    printMatrix(numeros);
   }
   
+  private static void fillMatrix( int[][] matrix) {
+    for(int i=0; i<matrix.length; i++){
+      for(int c=0; c<matrix[i].length; c++){
+        matrix[i][c] = new SecureRandom().nextInt(100);
+      }
+    }
+  }
+
+  private static void printSumMatrix(int[][] matrix) {
+    int result = 0;
+    for(int i=0; i<matrix.length; i++){
+      for(int c=0; c<matrix[i].length; c++){
+        int celula = matrix[i][c];
+        result += celula;
+      }
+    }
+    System.out.println("Soma é " + result);
+  }
+
+  private static void printLowerNumberMatrix(int[][] matrix) {
+    int lower = 0;
+    for(int i=0; i<matrix.length; i++){
+      for(int c=0; c<matrix[i].length; c++){
+        if (matrix[i][c] < lower) {
+          lower = matrix[i][c];
+        }
+      }
+    }
+    System.out.println("O menor numero é " + lower);
+  }
+
   private static void printDiagonalSumMatrix(int[][] matrix) {
     int result = 0;
     for(int i=0; i<matrix.length; i++){
@@ -25,13 +57,6 @@ public class Quest1 {
     System.out.println("A Soma da diagonal é " + result);
   }
 
-  private static void fillMatrix( int[][] matrix) {
-    for(int i=0; i<matrix.length; i++){
-      for(int c=0; c<matrix[i].length; c++){
-        matrix[i][c] = new SecureRandom().nextInt(100);
-      }
-    }
-  }
   private static void printMatrix(int[][] matrix) {
     for(int i=0; i<matrix.length; i++){
       for(int c=0; c<matrix[i].length; c++){
@@ -40,16 +65,6 @@ public class Quest1 {
       }
       System.out.println();
     }
-  }
-  private static void printSumMatrix(int[][] matrix) {
-    int result = 0;
-    for(int i=0; i<matrix.length; i++){
-      for(int c=0; c<matrix[i].length; c++){
-        int celula = matrix[i][c];
-        result += celula;
-      }
-    }
-    System.out.println("Soma é " + result);
   }
 
 
