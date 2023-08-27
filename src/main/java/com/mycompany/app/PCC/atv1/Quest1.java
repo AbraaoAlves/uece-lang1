@@ -34,7 +34,7 @@ public class Quest1 {
   }
 
   private static void printLowerNumberMatrix(int[][] matrix) {
-    int lower = 0;
+    int lower = Integer.MAX_VALUE;
     for(int i=0; i<matrix.length; i++){
       for(int c=0; c<matrix[i].length; c++){
         if (matrix[i][c] < lower) {
