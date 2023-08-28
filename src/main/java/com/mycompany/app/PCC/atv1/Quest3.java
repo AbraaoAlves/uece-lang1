@@ -1,8 +1,8 @@
 package com.mycompany.app.PCC.atv1;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
+
+import com.mycompany.app.PCC.atv1.operations.Operation;
 
 /**
  * 
@@ -17,34 +17,22 @@ public class Quest3 {
   static Scanner scan = new Scanner(System.in);
 
   public static void main(String[] args) {
-    Map<Character, String> operations = getOperations();
     System.out.println("System calc");
     System.out.println();
 
-    char operation = readOperation(operations);
-    String operationLabel = operations.get(operation);
-    System.out.println("Operação escolhida: " + operationLabel);
+    Operation operation = readOperation();
+    String operationLabel = operation.getLabel();
+    System.out.println("Operação escolhida: " + operation.getLabel());
     System.out.println();
 
     int[] numbers = getNumbers();
-    int result = calc(operation, numbers[0], numbers[1]);
+    int result = operation.calc(numbers[0], numbers[1]);
     System.out.println();
     System.out.println("O resultado  de sua '" + operationLabel + "' é " + result);
     System.out.println();
   }
 
-  private static Map<Character, String> getOperations() {
-    Map<Character, String> result = new HashMap<Character, String>();
-
-    result.put('+', "Soma");
-    result.put('-', "Subtração");
-    result.put('*', "Multiplicação");
-    result.put('/', "Divisão");
-
-    return result;
-  }
-
-  private static char readOperation(Map<Character, String> operations) {
+  private static Operation readOperation() {
     System.out.println("Escolha uma operação valida para começar: ");
     System.out.println();
     System.out.println("(+) para soma");
@@ -53,12 +41,12 @@ public class Quest3 {
     System.out.println("(/) para divisão");
     System.out.println();
 
-    char operation = scan.next().charAt(0);
-
-    if (!operations.containsKey(operation)) {
-      return readOperation(operations);
-    } else {
-      return operation;
+    Operation result =  Operation.getOperation(scan.next().charAt(0));
+    
+    if (result == null){
+      return readOperation();
+    }else {
+      return result;
     }
   }
 
@@ -73,20 +61,4 @@ public class Quest3 {
 
     return new int[] { a, b };
   }
-
-  private static int calc(char operation, int a, int b) {
-    switch (operation) {
-      case '+':
-        return a + b;
-      case '-':
-        return a - b;
-      case '*':
-        return a * b;
-      case '/':
-        return a / b;
-      default:
-        return 0;
-    }
-  }
 }
-g
