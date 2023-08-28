@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mycompany.app.PCC.atv1.quest4.CapturaDisciplina;
 import com.mycompany.app.PCC.atv1.quest4.Disciplina;
+import com.mycompany.app.PCC.atv1.quest4.PrintDisciplina;
 
 /**
  * Faça um programa que armazene:
@@ -25,10 +26,15 @@ public class Quest4 {
     
     for (int i = 0; i < 5; i++) {
       Disciplina item = CapturaDisciplina.captura();
+      PrintDisciplina.print(item);
+
       list.add(item);
     }
 
-    
+
+
+
+
 
   }
 }
