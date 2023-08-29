@@ -20,7 +20,6 @@ import com.mycompany.app.PCC.atv1.quest4.PrintDisciplina;
  */
 public class Quest4 {
   public static void main(String[] args) {
-    System.out.println("Hello wolrd");
 
     List<Disciplina> list = new ArrayList<Disciplina>();
     
@@ -30,11 +29,5 @@ public class Quest4 {
 
       list.add(item);
     }
-
-
-
-
-
-
   }
 }
