@@ -42,9 +42,13 @@ public class DisciplinaIO {
 
   public List<Disciplina> read() throws IOException, ClassNotFoundException {    
     ObjectInputStream fis = new ObjectInputStream(this.inputStream);
-    List<Disciplina> result = convertObjectToList(fis.readObject());
+    Object obj = fis.readObject();
+    
+    if (obj == null) {
+      return new ArrayList<Disciplina>();
+    }
 
-    return result;   
+    return convertObjectToList(obj);   
   }
 
   private static List<Disciplina> convertObjectToList(Object obj) {

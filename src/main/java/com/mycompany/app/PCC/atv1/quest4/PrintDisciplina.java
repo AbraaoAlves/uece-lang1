@@ -1,5 +1,7 @@
 package com.mycompany.app.PCC.atv1.quest4;
 
+import java.util.List;
+
 public class PrintDisciplina {
   public static void print(Disciplina item) {
     System.out.println();
@@ -9,5 +11,20 @@ public class PrintDisciplina {
 
     System.out.println();
 
+  }
+
+  public static void print(List<Disciplina> list){
+    System.out.println();
+    System.out.println("-----------------------------------------------------------------------------");
+    System.out.printf("%30s %5s %5s",  "NAME", "CREDITOS", "HORAS");
+    System.out.println();
+    System.out.println("-----------------------------------------------------------------------------");
+    for(Disciplina item: list){
+        System.out.format("%20s %5d %5d",
+                item.getNome(), item.getCreditos(), item.getHoras());
+        System.out.println();
+    }
+    System.out.println("-----------------------------------------------------------------------------");
+    System.out.println();
   }
 }
