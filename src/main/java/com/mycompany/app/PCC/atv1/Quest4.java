@@ -23,7 +23,7 @@ import com.mycompany.app.PCC.atv1.quest4.PrintDisciplina;
 public class Quest4 {
   public static void main(String[] args) {
 
-    List<Disciplina> list = CapturaDisciplina.captura();
+    List<Disciplina> list = CapturaDisciplina.captura(2);
 
     System.out.println("Disciplinas incluidas: ");
     PrintDisciplina.print(list);
