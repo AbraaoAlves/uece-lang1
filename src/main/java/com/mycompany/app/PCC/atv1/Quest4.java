@@ -23,18 +23,13 @@ import com.mycompany.app.PCC.atv1.quest4.PrintDisciplina;
 public class Quest4 {
   public static void main(String[] args) {
 
-    List<Disciplina> list = new ArrayList<Disciplina>();
-
-    for (int i = 0; i < 1; i++) {
-      Disciplina item = CapturaDisciplina.captura();
-      list.add(item);
-    }
+    List<Disciplina> list = CapturaDisciplina.captura();
 
     System.out.println("Disciplinas incluidas: ");
     PrintDisciplina.print(list);
     
     System.out.println();
-    DisciplinaIO io = new DisciplinaIO("list.bin");
+    DisciplinaIO io = new DisciplinaIO("list.ser");
 
     try {
       io.appendWrite(list);

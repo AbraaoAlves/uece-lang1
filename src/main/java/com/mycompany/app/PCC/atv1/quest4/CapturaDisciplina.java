@@ -1,11 +1,24 @@
 package com.mycompany.app.PCC.atv1.quest4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CapturaDisciplina {
   static Scanner scan = new Scanner(System.in);
 
-  public static Disciplina captura(){
+  public static List<Disciplina> captura(){
+      List<Disciplina> list = new ArrayList<Disciplina>();
+
+    for (int i = 0; i < 1; i++) {
+      Disciplina item = getDisciplina();
+      list.add(item);
+    }
+    
+    return list;
+  }
+
+  private static Disciplina getDisciplina(){
     
     scan.useDelimiter("\\n");  
     
