@@ -11,8 +11,20 @@ public class DisciplinaIO {
   
   public DisciplinaIO(String file){
     this.filename = file;
-
+    createIfNoExist(file);
   }
+
+  private void createIfNoExist(String file){
+    if (!new File(this.filename).exists()) {
+      
+      try {
+        write(new ArrayList<Disciplina>());
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+
   public void appendWrite(List<Disciplina> list) throws IOException, ClassNotFoundException{
     List<Disciplina> old = new ArrayList<Disciplina>(this.read());  
     old.addAll(list);
@@ -28,20 +40,13 @@ public class DisciplinaIO {
   }
 
   public List<Disciplina> read() throws IOException, ClassNotFoundException {    
-    List<Disciplina> empty = new ArrayList<Disciplina>();
-    
-    if (!new File(this.filename).exists()) {
-      write(empty);
-      return empty;
-    }
-
     FileInputStream file = new FileInputStream(this.filename);
     ObjectInputStream fis = new ObjectInputStream(file);
 
     Object obj = fis.readObject();
     
     if (obj == null) {
-      return empty;
+      return new ArrayList<Disciplina>();
     }
 
     return convertObjectToList(obj);   
