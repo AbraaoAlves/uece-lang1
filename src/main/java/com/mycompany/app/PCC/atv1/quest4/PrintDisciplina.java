@@ -20,7 +20,7 @@ public class PrintDisciplina {
     System.out.println();
     System.out.println("-----------------------------------------------------------------------------");
     for(Disciplina item: list){
-        System.out.format("%20s %5d %5d",
+        System.out.format("%30s %5d %5s",
                 item.getNome(), item.getCreditos(), item.getHoras());
         System.out.println();
     }
