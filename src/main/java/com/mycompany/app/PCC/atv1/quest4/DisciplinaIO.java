@@ -7,24 +7,12 @@ import java.util.Collection;
 import java.util.List;
 
 public class DisciplinaIO {
-  String file;
-  InputStream inputStream;
-  OutputStream outputStream;
+  String filename;
   
   public DisciplinaIO(String file){
-    this.file = file;
-    initStreams(file);
-  }
-  private void initStreams(String file) {
-    try {
-      this.inputStream = new FileInputStream(file);
-      this.outputStream = new FileOutputStream(file);
+    this.filename = file;
 
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
   }
-
   public void appendWrite(List<Disciplina> list) throws IOException, ClassNotFoundException{
     List<Disciplina> old = new ArrayList<Disciplina>(this.read());  
     old.addAll(list);
@@ -32,20 +20,28 @@ public class DisciplinaIO {
     this.write(old);
   }
 
-
-  public void write(List<Disciplina> list) throws IOException{    
-    ObjectOutputStream dos = new ObjectOutputStream(this.outputStream);
+  public void write(List<Disciplina> list) throws IOException {    
+    FileOutputStream file = new FileOutputStream(this.filename);
+    ObjectOutputStream dos = new ObjectOutputStream(file);
 
     dos.writeObject(list);    
-    dos.close();
   }
 
   public List<Disciplina> read() throws IOException, ClassNotFoundException {    
-    ObjectInputStream fis = new ObjectInputStream(this.inputStream);
+    List<Disciplina> empty = new ArrayList<Disciplina>();
+    
+    if (!new File(this.filename).exists()) {
+      write(empty);
+      return empty;
+    }
+
+    FileInputStream file = new FileInputStream(this.filename);
+    ObjectInputStream fis = new ObjectInputStream(file);
+
     Object obj = fis.readObject();
     
     if (obj == null) {
-      return new ArrayList<Disciplina>();
+      return empty;
     }
 
     return convertObjectToList(obj);   

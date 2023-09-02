@@ -1,7 +1,10 @@
 package com.mycompany.app.PCC.atv1.quest4;
 
-public class Disciplina {
+import java.io.*;
 
+public class Disciplina implements Serializable{
+  
+  public Disciplina(){}
   public Disciplina(String nome, int creditos, int horas) {
     this.nome = nome;
     this.creditos = creditos;
@@ -23,5 +26,4 @@ public class Disciplina {
   public String getNome() {
     return nome;
   }
-
 }
