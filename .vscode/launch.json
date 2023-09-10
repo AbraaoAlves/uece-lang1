@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Quest4",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.PCC.atv2.Quest4",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "Quest3",
             "request": "launch",
             "mainClass": "com.mycompany.app.PCC.atv2.Quest3",
