@@ -1,11 +1,10 @@
-gpackage com.mycompany.app.PCC.atv2;
+package com.mycompany.app.PCC.atv2;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
 
 /**
- * 
- *  Proponha um algoritmo que leia um número inteiro n (1 n 100) 
+ * Proponha um algoritmo que leia um número inteiro n (1 n 100) 
  * e gere n valores inteiros de forma aleatória, no intervalo de 1 a 100, 
  * e insira um a um em um vetor V, de modo que, após a inserção de cada valor, 
  * o vetor fique sempre ordenado de forma crescente. 
